@@ -25,7 +25,7 @@ import javax.persistence.Transient;
 import br.marlon.pontointeligente.api.enums.PerfilEnum;
 
 @Entity
-@Table(name = "lancamento")
+@Table(name = "funcionario")
 public class Funcionario implements Serializable {
 	
 private static final long serialVersionUID = -5754246207015712518L;
