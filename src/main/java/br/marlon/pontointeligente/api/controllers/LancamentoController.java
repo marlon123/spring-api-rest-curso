@@ -18,13 +18,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.marlon.pontointeligente.api.dtos.LancamentoDto;
 import br.marlon.pontointeligente.api.entities.Funcionario;
@@ -34,6 +37,9 @@ import br.marlon.pontointeligente.api.response.Response;
 import br.marlon.pontointeligente.api.services.FuncionarioService;
 import br.marlon.pontointeligente.api.services.LancamentoService;
 
+@RestController
+@RequestMapping("/api/lancamentos")
+@CrossOrigin(origins = "*")
 public class LancamentoController {
 	
 	private static final Logger log = LoggerFactory.getLogger(LancamentoController.class);
