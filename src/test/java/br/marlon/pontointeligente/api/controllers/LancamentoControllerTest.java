@@ -105,7 +105,7 @@ public class LancamentoControllerTest {
 
 		mvc.perform(MockMvcRequestBuilders.delete(URL_BASE + ID_LANCAMENTO)
 				.accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isForbidden());
+				.andExpect(status().isForbidden());//403
 	}
 
 	private String obterJsonRequisicaoPost() throws JsonProcessingException {

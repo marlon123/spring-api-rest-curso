@@ -56,7 +56,7 @@ public class EmpresaControllerTest {
 	private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	@Test
-	@WithMockUser
+	@WithMockUser//para o teste não falhar por causa da autenticação
 	public void testCadastrarLancamento() throws Exception {
 		Lancamento lancamento = obterDadosLancamento();
 		BDDMockito.given(this.funcionarioService.buscarPorId(Mockito.anyLong())).willReturn(Optional.of(new Funcionario()));
