@@ -1,6 +1,8 @@
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="ehcache.xsd">
-	<cache name="lancamentoPorId" 
+	
+	<!-- cache para controlar a listagem de lançamento por id -->
+	<cache name="lancamentoPorId"
 		maxEntriesLocalHeap="200"
 		timeToLiveSeconds="3600">
 	</cache>
